@@ -1,0 +1,27 @@
+--Create a video game store database
+
+CREATE TABLE inventory (id INTEGER PRIMARY KEY, name TEXT, console TEXT, release_year INTEGER, stock INTEGER);
+
+INSERT INTO inventory VALUES (1, "The Legend of Zelda: Ocarina of Time", "Nintendo 64", 1998, 25);
+INSERT INTO inventory VALUES (2, "Tony Hawk's Pro Skater 2", "PlayStation", 2000, 31);
+INSERT INTO inventory VALUES (3, "Grand Theft Auto IV", "PlayStation 3", 2008, 22);
+INSERT INTO inventory VALUES (4, "SoulCalibur", "Dreamcast", 1999, 33);
+INSERT INTO inventory VALUES (5, "Grand Theft Auto IV", "Xbox 360", 2008, 21);
+INSERT INTO inventory VALUES (6, "Super Mario Galaxy", "Wii", 2007, 43);
+INSERT INTO inventory VALUES (7, "Super Mario Galaxy 2", "Wii", 2010, 17);
+INSERT INTO inventory VALUES (8, "Red Dead Redemption 2", "Xbox One", 2018, 59);
+INSERT INTO inventory VALUES (9, "Grand Theft Auto V", "Xbox One", 2014, 59);
+INSERT INTO inventory VALUES (10, "Grand Theft Auto V", "PlayStation 3", 2013, 48);
+INSERT INTO inventory VALUES (11, "Disco Elysium: The Final Cut", "PC", 2021, 87);
+INSERT INTO inventory VALUES (12, "Grand Theft Auto V", "Xbox 360", 2013, 47);
+INSERT INTO inventory VALUES (13, "Tony Hawk's Pro Skater 2", "Dreamcast", 2000, 21);
+INSERT INTO inventory VALUES (14, "The Legend of Zelda: Breath of the Wild", "Switch", 2017, 85);
+INSERT INTO inventory VALUES (15, "Tony Hawk's Pro Skater 3", "PlayStation 2", 2001, 17);
+
+--display the inventory ordered by release year
+SELECT * FROM inventory;
+SELECT * FROM inventory ORDER BY release_year;
+
+--display the inventory ordered by console
+SELECT SUM(stock) FROM inventory;
+SELECT * FROM inventory ORDER BY console
